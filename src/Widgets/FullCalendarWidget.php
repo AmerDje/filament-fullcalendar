@@ -55,6 +55,11 @@ class FullCalendarWidget extends Widget implements HasForms, HasActions
         return ViewAction::make();
     }
 
+    protected function configureAction(Action $action): Action
+    {
+        return $action;
+    }
+
     /**
      * FullCalendar will call this function whenever it needs new event data.
      * This is triggered when the user clicks prev/next or switches views.
